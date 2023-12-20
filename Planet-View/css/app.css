@@ -1,0 +1,101 @@
+*{
+    border: solid red 1px;
+}
+
+body{
+    background: url(/img/starsBackground.png) center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.planet{
+    display: flex;
+    justify-content: center;
+    width: 20em;
+    height: 20em;
+    background-image: url(/img/earthSurface.jpeg);
+    background-size: cover;
+    box-shadow: inset -2em -2em 2em black, -0.5em -0.5em 1em rgb(133, 255, 178);
+    position: relative;
+    animation: rotate 8s linear infinite;
+}
+
+.moon{
+    background-image: url(/img/moonSurface.jpeg);
+    width: 6em;
+    height: 6em;
+    background-size: cover;
+    box-shadow: inset -1.5em -1.5em 1.5em black, -0.2em -0.2em 0.5em rgb(229, 229, 229);
+    position: absolute;
+    left: -11em;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    animation: rotate 5s linear infinite,
+    orbit 8s ease-in-out infinite;
+}
+
+#mainDiv{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#backToMenu{
+    display: flex;
+    justify-content: center;
+    border: solid yellow 1px;
+}
+
+.sailor{
+    display: flex;
+    justify-content: center;
+}
+
+#sailor {
+    display: flex;
+    justify-self: center;
+    width: 40%;
+    height: auto;
+    border: solid yellow 1px;
+}
+
+.planet, .moon {
+    border-radius: 50%;
+    background-repeat: repeat;
+    background-size: 200% 100%;
+}
+
+#app{
+    position: center;
+}
+
+@keyframes rotate {
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: -200% 0;
+    }
+}
+
+@keyframes orbit {
+    49%{
+        z-index: 1;
+    }
+    59%{
+        left: 25em;
+        z-index: -1;
+    }
+    99%{
+        z-index: -1;
+    }
+    100%{
+        left: -11em;
+        z-index: 1;
+    }
+}
