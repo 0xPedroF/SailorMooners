@@ -14,27 +14,32 @@ define(function () {
         },
         mercury: {
             hash: '#sailors/mercury',
-            controller: 'cryptoCoins-controller'
+            controller: 'loading-controller'
         },
         venus: {
             hash: '#sailors/venus',
-            controller: 'cryptoCoins-controller'
+            controller: 'loading-controller'
         },
+        
         moon: {
             hash: '#sailors/moon',
-            controller: 'cryptoCoins-controller'
+            controller: 'loading-controller'
+        },
+        mars: {
+            hash: '#sailors/mars',
+            controller: 'loading-controller'
         },
         jupiter: {
             hash: '#sailors/jupiter',
-            controller: 'cryptoCoins-controller'
+            controller: 'loading-controller'
         },
         saturn: {
             hash: '#sailors/saturn',
-            controller: 'cryptoCoins-controller'
+            controller: 'loading-controller'
         },
         uranus: {
             hash: '#sailors/uranus',
-            controller: 'cryptoCoins-controller'
+            controller: 'loading-controller'
         },
         neptune: {
             hash: '#sailors/neptune',
@@ -67,6 +72,7 @@ define(function () {
         require(['controllers/' + controllerName], function (controller) {
             try {
                 $('#app').empty();
+                
                 controller.start();
             } catch (err) {
                 console.log(err.stack);

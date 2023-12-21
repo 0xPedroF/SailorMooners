@@ -1,6 +1,305 @@
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 600px;
+  perspective: 1000px;
+  border-radius: 30px;
+  overflow: auto;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.flip-card-front,
+.flip-card-back {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.flip-card-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+body {
+  background: url(/webapp-sailormoon-solarsystem/img/starsBackground.png) center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.planet {
+  display: flex;
+  justify-content: center;
+  width: 20em;
+  height: 20em;
+  background-image: url(/webapp-sailormoon-solarsystem/img/earthSurface.jpeg);
+  background-size: cover;
+  box-shadow: inset -2em -2em 2em black, -0.5em -0.5em 1em rgb(133, 255, 178);
+  position: relative;
+  animation: rotate 8s linear infinite;
+}
+
+.mercury1 {
+  display: flex;
+  justify-content: center;
+  width: 20em;
+  height: 20em;
+  background-image: url(/webapp-sailormoon-solarsystem/img/mercuryBackground.jpeg);
+  background-size: cover;
+  box-shadow: inset -2em -2em 2em black, -0.5em -0.5em 1em rgb(255, 255, 255);
+  position: relative;
+  animation: rotate 8s linear infinite;
+  border-radius: 50%;
+  background-repeat: repeat;
+  background-size: 200% 100%;
+
+}
+
+.moon1 {
+  background-image: url(/webapp-sailormoon-solarsystem/img/moonSurface.jpeg);
+  width: 6em;
+  height: 6em;
+  background-size: cover;
+  box-shadow: inset -1.5em -1.5em 1.5em black, -0.2em -0.2em 0.5em rgb(229, 229, 229);
+  position: absolute;
+  left: -11em;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  animation: rotate 5s linear infinite,
+      orbit 8s ease-in-out infinite;
+}
+
+.venus1 {
+  display: flex;
+  justify-content: center;
+  width: 20em;
+  height: 20em;
+  background-image: url(/webapp-sailormoon-solarsystem/img/venusBackground.jpeg);
+  background-size: cover;
+  box-shadow: inset -2em -2em 2em black, -0.5em -0.5em 1em rgb(255, 255, 255);
+  position: relative;
+  animation: rotate 8s linear infinite;
+  border-radius: 50%;
+  background-repeat: repeat;
+  background-size: 200% 100%;
+
+}
+
+.mars1 {
+  display: flex;
+  justify-content: center;
+  width: 20em;
+  height: 20em;
+  background-image: url(/webapp-sailormoon-solarsystem/img/marsBackground.jpg);
+  background-size: cover;
+  box-shadow: inset -2em -2em 2em black, -0.5em -0.5em 1em rgb(255, 255, 255);
+  position: relative;
+  animation: rotate 8s linear infinite;
+  border-radius: 50%;
+  background-repeat: repeat;
+  background-size: 200% 100%;
+}
+
+.jupiter1 {
+  display: flex;
+  justify-content: center;
+  width: 20em;
+  height: 20em;
+  background-image: url(/webapp-sailormoon-solarsystem/img/jupiterBackground.jpeg);
+  background-size: cover;
+  box-shadow: inset -2em -2em 2em black, -0.5em -0.5em 1em rgb(255, 255, 255);
+  position: relative;
+  animation: rotate 8s linear infinite;
+  border-radius: 50%;
+  background-repeat: repeat;
+  background-size: 200% 100%;
+}
+
+.saturn1 {
+  display: flex;
+  justify-content: center;
+  width: 20em;
+  height: 20em;
+  background-image: url(/webapp-sailormoon-solarsystem/img/saturnBackground.jpeg);
+  background-size: cover;
+  box-shadow: inset -2em -2em 2em black, -0.5em -0.5em 1em rgb(255, 255, 255);
+  position: relative;
+  animation: rotate 8s linear infinite;
+  border-radius: 50%;
+  background-repeat: repeat;
+  background-size: 200% 100%;
+}
+
+.uranus1 {
+  display: flex;
+  justify-content: center;
+  width: 20em;
+  height: 20em;
+  background-image: url(/webapp-sailormoon-solarsystem/img/uranusBackground.jpeg);
+  background-size: cover;
+  box-shadow: inset -2em -2em 2em black, -0.5em -0.5em 1em rgb(255, 255, 255);
+  position: relative;
+  animation: rotate 8s linear infinite;
+  border-radius: 50%;
+  background-repeat: repeat;
+  background-size: 200% 100%;
+}
+
+.neptune1 {
+  display: flex;
+  justify-content: center;
+  width: 20em;
+  height: 20em;
+  background-image: url(/webapp-sailormoon-solarsystem/img/neptuneBackground.jpeg);
+  background-size: cover;
+  box-shadow: inset -2em -2em 2em black, -0.5em -0.5em 1em rgb(255, 255, 255);
+  position: relative;
+  animation: rotate 8s linear infinite;
+  border-radius: 50%;
+  background-repeat: repeat;
+  background-size: 200% 100%;
+}
+
+.text {
+  margin-bottom: 5px;
+  height: 70px;
+  border: 0px;
+}
+
+#mainDiv {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#backToMenu {
+  display: flex;
+  border-radius: 20px;
+  justify-content: center;
+  margin-top: 50px;
+  background-color: rgb(6, 0, 185);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+#backToMenu:hover {
+  background-color: #00035c;
+  /* Green */
+  color: white;
+}
+
+.sailor {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  width: auto;
+
+}
+
+#sailor {
+  display: flex;
+  justify-self: center;
+  width: auto;
+  height: 600px;
+  margin-left: 200px;
+  margin-right: 180px;
+  z-index: 2;
+
+  animation: float 2s ease-in-out infinite;
+}
+
+.planet,
+.moon1 {
+  border-radius: 50%;
+  background-repeat: repeat;
+  background-size: 200% 100%;
+
+}
+
+#app {
+  position: center;
+}
+
+@keyframes rotate {
+  from {
+      background-position: 0 0;
+  }
+
+  to {
+      background-position: -200% 0;
+  }
+}
+
+@keyframes orbit {
+  49% {
+      z-index: 1;
+  }
+
+  59% {
+      left: 25em;
+      z-index: -1;
+  }
+
+  99% {
+      z-index: -1;
+  }
+
+  100% {
+      left: -11em;
+      z-index: 1;
+  }
+}
+
+@keyframes float {
+  50% {
+      transform: translateY(50px);
+  }
+}
+
 .container {
-    margin: 20px;
     
+    height: 100vh;
+    background-color: #192735;
 
   
 }
@@ -11,17 +310,9 @@
   height: 100%;
 }
 
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body{
-    height: 100vh;
-    background-color: #192735;
-   
-}
+
+
 .sun {
     width: 100px;
     height: 100px;
@@ -526,4 +817,5 @@ body{
   .mercury:hover::before {
     opacity: 1;
   }
+  
 

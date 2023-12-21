@@ -84,10 +84,7 @@ define(function () {
     };
 
     internals.renderButton = function () {
-        if (internals.elements.button) {
-            internals.elements.button.empty();
-            return;
-        }
+        
         internals.elements.button = $(internals.createButton())
         internals.elements.button.click(internals.handlers['stop-button']);
        
@@ -98,9 +95,9 @@ define(function () {
  
 
     externals.bind = function (event, handler) {
-        console.log(event, "HNDLER", handler)
+        
         internals.handlers[event] = handler;
-        console.log("[HANDLERS IN BINDING]:", internals.handlers)
+        
     };
 
     externals.render = function () {
