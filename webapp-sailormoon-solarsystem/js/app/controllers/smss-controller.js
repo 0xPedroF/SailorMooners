@@ -10,7 +10,7 @@ define(['views/smss-view'], function (
     externals.start = function () {
         internals.bindEventHandlers();
         smssView.render();
-
+   
     };
     internals.goToPlanet = function (planet) {
         window.location.hash = planet;

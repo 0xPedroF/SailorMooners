@@ -15,8 +15,8 @@ define(function() {
             likes: "Reading, studying, chess, swimming, sandwiches",
             dislikes: "Heat, dishonesty, love letters",
             affiliation: "Sailor Guardians",
-            url: "img/mercury.png"
-    
+            url: "img/mercury.png",
+            audio: "audio/mercury.mp3"
         },
         {
             id: "#sailors/venus",
@@ -30,7 +30,8 @@ define(function() {
             likes: "Singing, casing after idols, playing volleyball, romance",
             dislikes: "Her mother, police officers, being alone, math class, injustice",
             affiliation: "Sailor Guardians",
-            url: "img/venus.png"
+            url: "img/venus.png",
+            audio: "audio/venus.mp3"
         },
         {
             id: "#sailors/moon",
@@ -44,7 +45,8 @@ define(function() {
             likes: "Eating cake, comics/manga, sleeping, video games, home economics class",
             dislikes: "Math class, dentists, ghosts, carrots",
             affiliation: "Sailor Guardians",
-            url: "img/sailor.png"
+            url: "img/sailor.png",
+            audio: "audio/moon.mp3"
         },
         {
             id: "#sailors/mars",
@@ -58,7 +60,8 @@ define(function() {
             likes: "Meditation, white Casablancas, singing, spiritualism, fugu",
             dislikes: "Canned asparagus, lack of discipline, television, negativity",
             affiliation: "Sailor Guardians",
-            url: "img/mars.png"
+            url: "img/mars.png",
+            audio: "audio/mars.mp3"
         },
         {
             id: "#sailors/jupiter",
@@ -72,7 +75,8 @@ define(function() {
             likes: "Cooking, color pink, gardening, martial arts, home economics class",
             dislikes: "Airplanes, romantic rejection, insects",
             affiliation: "Sailor Guardians",
-            url: "img/jupiter.png"
+            url: "img/jupiter.png",
+            audio: "audio/jupiter.mp3"
         },
         {
             id: "#sailors/saturn",
@@ -86,7 +90,8 @@ define(function() {
             likes: "Reading, japanese soba, collecting lamps, poetry, solitude, painting",
             dislikes: "Milk, violence, marathons, injustice, gym class",
             affiliation: "Sailor Guardians",
-            url: "img/saturn.png"
+            url: "img/saturn.png",
+            audio: "audio/saturn.mp3"
         },
         {
             id: "#sailors/uranus",
@@ -100,7 +105,8 @@ define(function() {
             likes: "Racing, sports, color gold, salad, challenges",
             dislikes: "Unnecessary rules, weakness, modern history, Natto",
             affiliation: "Sailor Guardians",
-            url: "img/uranus.png"
+            url: "img/uranus.png",
+            audio: "audio/uranus.mp3"
         },
         {
             id: "#sailors/neptune",
@@ -114,7 +120,8 @@ define(function() {
             likes: "Collecting cosmetics, playing the violin, color marine blue, sashimi, music, swimming, the arts",
             dislikes: "Disorder, sea cucumbers, kikurage",
             affiliation: "Sailor Guardians",
-            url: "img/neptune.png"
+            url: "img/neptune.png",
+            audio: "audio/neptune.mp3"
         }
     ];
 
@@ -247,6 +254,7 @@ define(function() {
         },
         {
             id: "#sailors/moon",
+            type:"Satellite",
             name: "Moon",
             orbitalPeriod: { days: "27,32 days", years: "0,07 years" },
             orbitalSpeed: "1,02 km/s",

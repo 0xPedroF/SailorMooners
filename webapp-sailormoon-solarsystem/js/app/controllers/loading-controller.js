@@ -4,6 +4,8 @@ define(["../views/script",'./planet-controller'] ,function(view, planetControlle
     externals.start = function(){
        
         view();
+        let audio = new Audio("audio/whoosh.mp3")
+        audio.play();
         setTimeout(() => {
             
             $("#canvas").remove();
@@ -13,7 +15,7 @@ define(["../views/script",'./planet-controller'] ,function(view, planetControlle
             
             console.log("LOADING CONTROLLER")
             planetController.start();
-        },2000);
+        },4000);
     }
 
     return externals;

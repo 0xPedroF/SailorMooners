@@ -1,6 +1,7 @@
-define(['views/planet-view', 'services/service'], function (
+define(['views/planet-view', 'services/service','views/script'], function (
     planetView,
-    service
+    service,
+    loading
 ) {
     // public methods and properties
     var externals = {};
@@ -19,7 +20,22 @@ define(['views/planet-view', 'services/service'], function (
         planetView.bind('backToMenu',internals.goBackSolarSystem);
     };
      internals.goBackSolarSystem = function(){
-         window.location.hash = 'sailorMoonSolarSystem';
+        loading();
+        $("#sailor").remove();
+        $("#mainDiv").remove();
+        let audio = new Audio("audio/whoosh.mp3")
+        audio.play();
+        setTimeout(() => {
+            
+            $("#canvas").remove();
+            
+
+            const element = `<canvas class="canvas"  id="canvas"></canvas>`
+            $(element).appendTo('body');
+            
+            console.log("LOADING CONTROLLER")
+            window.location.hash = 'sailorMoonSolarSystem';
+        },4000);
          
      }
  

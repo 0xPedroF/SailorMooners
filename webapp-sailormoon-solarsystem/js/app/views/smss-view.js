@@ -41,6 +41,7 @@ define(function () {
     };
     
     internals.renderSolarSystem = function () {
+        
         if (internals.elements.solarSystem) {
             internals.elements.solarSystem.empty();
         }
@@ -105,6 +106,7 @@ define(function () {
             internals.elements.app = $('#app');
             internals.renderButton();
             internals.renderSolarSystem();
+            
             
     };
     return externals;

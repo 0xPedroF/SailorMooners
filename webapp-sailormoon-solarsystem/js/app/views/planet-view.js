@@ -1,14 +1,14 @@
 define(function () {
-    var internals = {
-        handlers: {},
-        elements: {},
-        data: {},
-    };
+  var internals = {
+    handlers: {},
+    elements: {},
+    data: {},
+  };
 
-    var externals = {};
+  var externals = {};
 
-    internals.createCard = function () {
-        const card = `<div class="flip-card">
+  internals.createCard = function () {
+    const card = `<div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
           <h1>${internals.data.planet.name}</h1>
@@ -33,64 +33,65 @@ define(function () {
           </div>
         </div>
       </div>`;
-        return card;
-    };
+    return card;
+  };
 
-    internals.createButton = function () {
-        const backToMenu = `<div class="backToMenu"><button id="backToMenu">I WANT ANOTHER SAILOR!!</button></div>`;
-        return backToMenu;
-    };
+  internals.createButton = function () {
+    const backToMenu = `<div class="backToMenu"><button id="backToMenu">I WANT ANOTHER SAILOR!!</button></div>`;
+    return backToMenu;
+  };
 
-    internals.createPlanetDiv = function () {
-        const planetDiv = `${internals.data.planet.div}`
-        return planetDiv
-    }
+  internals.createPlanetDiv = function () {
+    const planetDiv = `${internals.data.planet.div}`;
+    return planetDiv;
+  };
 
-    internals.createSailor = function () {
-        const sailor = `<img id="sailor" src="${internals.data.sailors.url}">`
-        return sailor;
-    }
+  internals.createSailor = function () {
+    const sailor = `<img id="sailor" src="${internals.data.sailors.url}">`;
+    return sailor;
+  };
 
-    internals.createMainDiv = function () {
-        const card = internals.createCard();
-        const planetDiv = internals.createPlanetDiv();
-        const sailor = internals.createSailor();
+  internals.createMainDiv = function () {
+    const card = internals.createCard();
+    const planetDiv = internals.createPlanetDiv();
+    const sailor = internals.createSailor();
 
+    const mainDiv = `<div id="mainDiv">${planetDiv}${sailor}${card}</div>`;
+    return mainDiv;
+  };
 
-        const mainDiv = `<div id="mainDiv">${planetDiv}${sailor}${card}</div>`
-        return mainDiv;
-    }
+  internals.renderMainDiv = function () {
+    internals.elements.mainDiv = $("#mainDiv");
+    internals.elements.mainDiv = $(internals.createMainDiv());
+    internals.elements.app.append(internals.elements.mainDiv);
+    console.log("Main div Rendered");
+  };
+  externals.bind = function (event, handler) {
+    internals.handlers[event] = handler;
+  };
 
-    internals.renderMainDiv = function () {
-       
+  internals.renderButton = function () {
+    internals.elements.button = $(internals.createButton());
+    internals.elements.button.click(() => {
+        internals.handlers["backToMenu"]();
+        internals.data.audio.pause();
+    })
+    internals.elements.app.append(internals.elements.button);
+    console.log("Button is rendered");
+  };
 
-        internals.elements.mainDiv = $('#mainDiv')
-        internals.elements.mainDiv = $(internals.createMainDiv());
-        internals.elements.app.append(internals.elements.mainDiv);
-        console.log("Main div Rendered");
-    }
-    externals.bind = function(event,handler){
-        internals.handlers[event] = handler;
-    }
+  externals.render = function (sailor, planet) {
+    internals.data.sailors = sailor;
+    internals.data.audio = new Audio(sailor.audio)
+    console.log(sailor, planet);
+    internals.data.planet = planet;
+    internals.elements.app = $("#app");
+    internals.renderButton();
+    internals.renderMainDiv();
+    setTimeout(() => {
+      internals.data.audio.play();
+    }, 1000);
+  };
 
-    internals.renderButton = function () {
-       
-
-        internals.elements.button = $(internals.createButton());
-        internals.elements.button.click(internals.handlers['backToMenu'])
-        internals.elements.app.append(internals.elements.button);
-        console.log("Button is rendered");
-    }
-
-    externals.render = function (sailor, planet) {
-
-        internals.data.sailors = sailor;
-        console.log(sailor,planet);
-        internals.data.planet = planet;
-        internals.elements.app = $('#app');
-        internals.renderButton();
-        internals.renderMainDiv();
-    };
-
-    return externals;
+  return externals;
 });
