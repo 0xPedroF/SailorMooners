@@ -209,7 +209,7 @@ body {
   border-radius: 20px;
   justify-content: center;
   margin-top: 50px;
-  background-color: rgb(6, 0, 185);
+  background-color: rgba(155, 191, 211, 80);
   border: none;
   color: white;
   padding: 16px 32px;
@@ -223,7 +223,7 @@ body {
 }
 
 #backToMenu:hover {
-  background-color: #00035c;
+  background-color: #0006ae;
   color: white;
 }
 
@@ -232,9 +232,9 @@ body {
   border-radius: 20px;
   justify-content: center;
   margin-top: 50px;
-  background-color: rgb(6, 0, 185);
+  background-color:  rgba(155, 191, 211, 80);
   border: none;
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 16px 32px;
   text-align: center;
   font-size: 16px;
@@ -672,7 +672,7 @@ body {
 }
 
 .neptune::before {
-    content: "Travel Neptune";
+    content: "Visit Neptune";
     position: absolute;
     bottom: 100%;
     left: 50%;
@@ -695,7 +695,7 @@ body {
       width: 30px;
   }
   .mars::before {
-    content: "Travel Mars";
+    content: "Visit Mars";
     position: absolute;
     bottom: 100%;
     left: 50%;
@@ -717,7 +717,7 @@ body {
     width: 47px;
 }
   .uranus::before {
-    content: "Travel Uranus";
+    content: "Visit Uranus";
     position: absolute;
     bottom: 100%;
     left: 50%;
@@ -743,7 +743,7 @@ body {
 
 
   .saturn::before {
-    content: "Travel Saturn";
+    content: "Visit Saturn";
     position: absolute;
     bottom: 100%;
     left: 50%;
@@ -768,7 +768,7 @@ body {
 
 
   .jupiter::before {
-    content: "Travel Jupiter";
+    content: "Visit Jupiter";
     position: absolute;
     bottom: 100%;
     left: 50%;
@@ -793,7 +793,7 @@ body {
 
 
   .moon::before {
-    content: "Travel Moon";
+    content: "Visit the Moon";
     position: absolute;
     bottom: 100%;
     left: 50%;
@@ -818,7 +818,7 @@ body {
 
 
   .venus::before {
-    content: "Travel Venus";
+    content: "Visit Venus";
     position: absolute;
     bottom: 100%;
     left: 50%;
@@ -843,7 +843,7 @@ body {
 
 
   .mercury::before {
-    content: "Travel Uranus";
+    content: "Visit Mercury";
     position: absolute;
     bottom: 100%;
     left: 50%;

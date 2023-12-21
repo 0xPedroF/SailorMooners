@@ -36,7 +36,7 @@ define(function () {
     };
 
     internals.createButton = function () {
-        const backToMenu = `<div class="backToMenu"><button id="backToMenu">Solar System</button></div>`;
+        const backToMenu = `<div class="backToMenu"><button id="backToMenu">I WANT ANOTHER SAILOR!!</button></div>`;
         return backToMenu;
     };
 
