@@ -16,7 +16,9 @@ define(() => {
 
             hash: "#details",
             controller: "planet-controller"
-        }
+        },
+
+        
 
     };
 

@@ -4,7 +4,7 @@ define(function() {
 
     internals.sailors = [
         {
-            id: "1",
+            id: "#mercury",
             scoutName: "Sailor Mercury",
             japaneseName: "Ami Mizuno (水野 亜美)",
             englishName: "Amy Anderson",
@@ -14,11 +14,12 @@ define(function() {
             description: "The Guardian of Water and Wisdom.",
             likes: "Reading, studying, chess, swimming, sandwiches",
             dislikes: "Heat, dishonesty, love letters",
-            affiliation: "Sailor Guardians"
+            affiliation: "Sailor Guardians",
+            url: "img/mercury.png"
     
         },
         {
-            id: "2",
+            id: "#venus",
             scoutName: "Sailor Venus",
             japaneseName: "Minako Aino (愛野 美奈子)",
             englishName: "Mina Andrews",
@@ -28,7 +29,8 @@ define(function() {
             description: "The Guardian of Love and Beauty.",
             likes: "Singing, casing after idols, playing volleyball, romance",
             dislikes: "Her mother, police officers, being alone, math class, injustice",
-            affiliation: "Sailor Guardians"
+            affiliation: "Sailor Guardians",
+            url: "img/venus.png"
         },
         {
             id: "#details",
@@ -41,10 +43,11 @@ define(function() {
             description: "The main protagonist of the series.",
             likes: "Eating cake, comics/manga, sleeping, video games, home economics class",
             dislikes: "Math class, dentists, ghosts, carrots",
-            affiliation: "Sailor Guardians"
+            affiliation: "Sailor Guardians",
+            url: "img/sailor.png"
         },
         {
-            id: "4",
+            id: "#mars",
             scoutName: "Sailor Mars",
             japaneseName: "Rei Hino (火野 レイ)",
             englishName: "Raye Hino",
@@ -54,10 +57,11 @@ define(function() {
             description: "The Guardian of Fire and Passion.",
             likes: "Meditation, white Casablancas, singing, spiritualism, fugu",
             dislikes: "Canned asparagus, lack of discipline, television, negativity",
-            affiliation: "Sailor Guardians"
+            affiliation: "Sailor Guardians",
+            url: "img/mars.png"
         },
         {
-            id: "5",
+            id: "#jupiter",
             scoutName: "Sailor Jupiter",
             japaneseName: "Makoto Kino (木野 まこと)",
             englishName: "Lita Kino",
@@ -67,10 +71,11 @@ define(function() {
             description: "The Guardian of Thunder and Courage.",
             likes: "Cooking, color pink, gardening, martial arts, home economics class",
             dislikes: "Airplanes, romantic rejection, insects",
-            affiliation: "Sailor Guardians"
+            affiliation: "Sailor Guardians",
+            url: "img/jupiter.png"
         },
         {
-            id: "6",
+            id: "#saturn",
             scoutName: "Sailor Saturn",
             japaneseName: "Hotaru Tomoe (土萠 ほたる)",
             englishName: "Hotaru Tomlinson",
@@ -80,10 +85,11 @@ define(function() {
             description: "The Guardian of Silence and Destruction.",
             likes: "Reading, japanese soba, collecting lamps, poetry, solitude, painting",
             dislikes: "Milk, violence, marathons, injustice, gym class",
-            affiliation: "Sailor Guardians"
+            affiliation: "Sailor Guardians",
+            url: "img/saturn.png"
         },
         {
-            id: "7",
+            id: "#uranus",
             scoutName: "Sailor Uranus",
             japaneseName: "Haruka Tenou (天王 はるか)",
             englishName: "Amara Tenou",
@@ -93,10 +99,11 @@ define(function() {
             description: "The Guardian of the Skies and Sky Scraper.",
             likes: "Racing, sports, color gold, salad, challenges",
             dislikes: "Unnecessary rules, weakness, modern history, Natto",
-            affiliation: "Sailor Guardians"
+            affiliation: "Sailor Guardians",
+            url: "img/uranus.png"
         },
         {
-            id: "8",
+            id: "#neptune",
             scoutName: "Sailor Neptune",
             japaneseName: "Michiru Kaiou (海王 みちる)",
             englishName: "Michel Kaiou",
@@ -106,12 +113,14 @@ define(function() {
             description: "The Guardian of the Ocean and Intuition.",
             likes: "Collecting cosmetics, playing the violin, color marine blue, sashimi, music, swimming, the arts",
             dislikes: "Disorder, sea cucumbers, kikurage",
-            affiliation: "Sailor Guardians"
+            affiliation: "Sailor Guardians",
+            url: "img/neptune.png"
         }
     ];
 
     internals.planets = [
         {
+            id: "#sailors/mercury",
             name: "Mercury",
             type: "Terrestrial",
             orbitalPeriod: { days: "89,96 days", years: "0,24 years" },
@@ -124,6 +133,7 @@ define(function() {
             satellites: { number: 0, names: [] },
             temperature: "167°C",
             gravity: "3.7 m/s²",
+            div: '<div class="mercury"></div>'
         },
         {
             name: "Venus",
@@ -138,11 +148,12 @@ define(function() {
             satellites: { number: 0, names: [] },
             temperature: "461°C",
             gravity: "8.87 m/s²",
+            div: '<div class="venus"></div>'
         },
         {
             name: "Mars",
             type: "Terrestrial",
-            orbitalPeriod: { days: "686,97 dias", years: "1,88 anos" },
+            orbitalPeriod: { days: "686,97 days", years: "1,88 years" },
             orbitalSpeed: "24,07 km/s",
             rotationDuration: "24h37min",
             radius: "3.397 km",
@@ -152,8 +163,10 @@ define(function() {
             satellites: { number: 2, names: ["Fobos", "Deimos"] },
             temperature: "-63°C",
             gravity: "3.721 m/s²",
+            div: '<div class="mars"></div>'
         },
         {
+            
             name: "Earth",
             type: "Terrestrial",
             orbitalPeriod: { days: "365,26 days", years: "1 year" },
@@ -165,9 +178,10 @@ define(function() {
             satellites: { number: 1, names: ["Moon"] },
             temperature: "15°C",
             oneWayLightToTheSun: "8,36 min",
-            gravity: "9.807 m/s²",
+            gravity: "9.807 m/s²"
         },
         {
+            id: "#jupiter",
             name: "Jupiter",
             type: "Gas Giant",
             orbitalPeriod: { days: "4.331,57 days", years: "11,86 years" },
@@ -180,8 +194,10 @@ define(function() {
             satellites: { number: 79, names: ["Io", "Europa", "Ganímedes", "Calisto"] },
             temperature: "-108°C",
             gravity: "24.79 m/s²",
+            div: '<div class="jupiter"></div>'
         },
         {
+            id: "saturn",
             name: "Saturn",
             type: "Gas Giant",
             orbitalPeriod: { days: "10.757,74 days", years: "29,45 years" },
@@ -207,8 +223,10 @@ define(function() {
             },
             temperature: "-139°C",
             gravity: "10.44 m/s²",
+            div: '<div class="saturn"></div>'
         },
         {
+            id:"#neptune",
             name: "Neptune",
             type: "Ice Giant",
             orbitalPeriod: { days: "60.224,90 days", years: "164,88 years" },
@@ -232,8 +250,10 @@ define(function() {
             },
             temperature: "-218°C",
             gravity: "11.15 m/s²",
+            div: '<div class="neptune"></div>'
         },
         {
+            id:"#uranus",
             name: "Uranus",
             type: "Ice Giant",
             orbitalPeriod: { days: "30.799,10 days", years: "84,32 years" },
@@ -249,6 +269,7 @@ define(function() {
             },
             temperature: "-200°C",
             gravity: "8.87 m/s²",
+            div: '<div class="uranus"></div>'
         },
         {
             id: "#details",
@@ -263,6 +284,7 @@ define(function() {
             satellites: { number: 0, names: [] },
             temperature: "-38°C",
             gravity: "1.62 m/s²",
+            div: '<div class="planet"><div class="moon"></div></div>'
         },
     ];
 

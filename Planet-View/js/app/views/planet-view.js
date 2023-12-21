@@ -41,12 +41,12 @@ define(function () {
     };
 
     internals.createPlanetDiv = function () {
-        const planetDiv = `<div class="planet"><div class="moon"></div></div>`
+        const planetDiv = `${internals.data.planet.div}`
         return planetDiv
     }
 
     internals.createSailor = function () {
-        const sailor = `<img id="sailor" src="img/sailor.png">`
+        const sailor = `<img id="sailor" src="${internals.data.sailors.url}">`
         return sailor;
     }
 
