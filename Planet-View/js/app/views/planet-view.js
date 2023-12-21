@@ -7,7 +7,7 @@ define(function () {
     var externals = {};
 
     internals.createButton = function () {
-        const backToMenu = `<header class="backToMenu"><button id="backToMenu">Solar System</button></header>`;
+        const backToMenu = `<div class="backToMenu"><button id="backToMenu">Solar System</button></div>`;
         return backToMenu;
     };
 
@@ -17,7 +17,7 @@ define(function () {
     }
 
     internals.createSailor = function() {
-        const sailor = `<div class="sailor"><img id="sailor" src="img/SailorMoon.png"></div>`
+        const sailor = `<div class="sailor"><img id="sailor" src="img/sailor.png"></div>`
         return sailor;
     }
 

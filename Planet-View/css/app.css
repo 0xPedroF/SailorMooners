@@ -1,5 +1,4 @@
 *{
-    border: solid red 1px;
 }
 
 body{
@@ -8,7 +7,6 @@ body{
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .planet{
@@ -48,7 +46,6 @@ body{
 #backToMenu{
     display: flex;
     justify-content: center;
-    border: solid yellow 1px;
 }
 
 .sailor{
@@ -61,13 +58,13 @@ body{
     justify-self: center;
     width: 40%;
     height: auto;
-    border: solid yellow 1px;
 }
 
 .planet, .moon {
     border-radius: 50%;
     background-repeat: repeat;
     background-size: 200% 100%;
+
 }
 
 #app{
