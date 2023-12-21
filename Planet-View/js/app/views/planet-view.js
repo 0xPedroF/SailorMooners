@@ -51,12 +51,12 @@ define(function () {
     }
 
     internals.createMainDiv = function() {
-        //const card = internals.createCard();
+        const card = internals.createCard();
         const planetDiv = internals.createPlanetDiv();
         const sailor = internals.createSailor();
           
 
-        const mainDiv = `<div id="mainDiv">${planetDiv}${sailor}</div>`
+        const mainDiv = `<div id="mainDiv">${planetDiv}${sailor}${card}</div>`
         return mainDiv;
     }
 
@@ -83,7 +83,7 @@ define(function () {
 
     externals.render = function (sailor, planet) {
 
-        internals.data.sailor = sailor;
+        internals.data.sailors = sailor;
         internals.data.planet = planet;
         internals.elements.app = $('body');
         internals.renderButton();

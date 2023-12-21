@@ -1,5 +1,6 @@
-define(['views/planet-view'], function (
+define(['views/planet-view', 'services/service'], function (
     planetView,
+    service
 ) {
     // public methods and properties
     var externals = {};
@@ -9,23 +10,20 @@ define(['views/planet-view'], function (
     // initialize the module
     externals.start = function () {
         internals.bindEventHandlers();
-        planetView.render();
+        planetView.render(service.getSailor(),service.getPlanet());
     };
 
     // bind event handlers for the film planetView
     internals.bindEventHandlers = function () {
-        //planetView.bind('button', internals.buttonHandler);
+        //    planetView.bind('button', internals.buttonHandler);
     };
 
     // handle button click events
-    // internals.buttonHandler = function () {
-    //     planetService.getCharacters(1, function() { console.log('Hey')});
-    //     console.log("Characters gotten - buttonHandler() works");
-    // };
-
     internals.buttonHandler = function () {
-        planetView.render();
+
     };
+
+
 
     return externals;
 });
