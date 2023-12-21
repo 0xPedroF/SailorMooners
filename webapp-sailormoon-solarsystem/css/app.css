@@ -1,0 +1,529 @@
+.container {
+    margin: 20px;
+    
+
+  
+}
+#canvas{
+  position: absolute;
+  pointer-events:none;
+  width: 100%;
+  height: 100%;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: #192735;
+   
+}
+.sun {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(#f09819, #ff512f);
+    border-radius: 50%;
+    box-shadow: -4px 2px 56px orange;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+.mercury_orbit{
+    width: 150px;
+    height: 150px;
+}
+.mercury{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(#504e51,#97979f,#ceccd1,#b5a7a7);
+    position: absolute;
+    top: 44%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+    animation: orbit1 4s linear infinite;
+}
+@keyframes orbit1{
+    from{
+        transform: rotate(0deg) translate(75px) rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg) translate(75px) rotate(-360deg); 
+    }
+}
+
+.mercury_orbit,
+.venus_orbit,
+.earth_orbit,
+.mars_orbit,
+.jupiter_orbit,
+.saturn_orbit,
+.uranus_orbit,
+.neptune_orbit {
+  border: 1px dotted #dd9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: transparent;
+  
+  
+}
+.venus_orbit {
+  height: 210px;
+  width: 210px;
+}
+.venus {
+  width: 29px;
+  height: 29px;
+  background: linear-gradient(#8b91a1, #bbb7ab, #ddd8d4, #efefef);
+  border-radius: 50%;
+  position: absolute;
+  top: 43%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+  animation: orbit2 8s linear infinite;
+}
+@keyframes orbit2 {
+  from {
+    transform: rotate(0deg) translateX(105px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(105px) rotate(-360deg);
+  }
+}
+.earth_orbit {
+  height: 300px;
+  width: 300px;
+}
+.earth {
+  height: 34px;
+  width: 34px;
+  background-image: url("/webapp-sailormoon-solarsystem/images/earth.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 44%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  animation: orbit3 12s linear infinite;
+  
+}
+@keyframes orbit3 {
+  from {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+.moon_orbit {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 0.8px dotted #dd9;
+  position: relative;
+  top: -20%;
+  left: -25%;
+  background: transparent;
+}
+.moon {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: -4px 2px 56px #fff;
+  position: absolute;
+  top: 42%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  animation: moon-orbit 4s linear infinite;
+  
+}
+@keyframes moon-orbit {
+  from {
+    transform: rotate(0deg) translateX(24px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(24px) rotate(-360deg);
+  }
+}
+.mars_orbit {
+  height: 400px;
+  width: 400px;
+}
+.mars {
+  height: 23px;
+  width: 23px;
+  background: linear-gradient(
+    #99857a,
+    #c6785c,
+    #e27b58,
+    #ff9d6f,
+    #663926,
+    #8e6a5a
+  );
+  border-radius: 50%;
+  position: absolute;
+  top: 47%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  animation: orbit4 11s linear infinite;
+}
+@keyframes orbit4 {
+  from {
+    transform: rotate(0deg) translateX(200px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(200px) rotate(-360deg);
+  }
+}
+.jupiter_orbit {
+  height: 500px;
+  width: 500px;
+}
+.jupiter {
+  height: 48px;
+  width: 48px;
+  background: linear-gradient(
+    #404436,
+    #a79c86,
+    #d2cfda,
+    #d39c7e,
+    #90614d,
+    #c88b3a
+  );
+  border-radius: 50%;
+  position: absolute;
+  top: 46%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  animation: orbit5 6s linear infinite;
+  
+}
+@keyframes orbit5 {
+  from {
+    transform: rotate(0deg) translateX(250px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(250px) rotate(-360deg);
+  }
+}
+.saturn_orbit {
+  height: 630px;
+  width: 630px;
+}
+.saturn {
+  height: 43px;
+  width: 43px;
+  background: linear-gradient(#343e47, #7b7869, #a49b72, #c5ab6e, #c3a171);
+  border-radius: 50%;
+  position: absolute;
+  top: 47%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  animation: orbit6 12s linear infinite;
+}
+@keyframes orbit6 {
+  from {
+    transform: rotate(0deg) translateX(315px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(315px) rotate(-360deg);
+  }
+}
+.saturn_ring {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 3px double #dd9;
+  position: relative;
+  top: -8%;
+  left: -10%;
+  background-color: transparent;
+}
+.uranus_orbit {
+  height: 750px;
+  width: 750px;
+  
+}
+
+.uranus {
+  height: 40px;
+  width: 40px;
+  background: linear-gradient(#d5fbfc, #bbe1e4, #93bbbe, #65868b);
+  border-radius: 50%;
+  position: absolute;
+  top: 47.5%;
+  left: 47.5%;
+  transform: translate(-50%, -50%);
+  animation: orbit7 14s linear infinite;
+}
+@keyframes orbit7 {
+  from {
+    transform: rotate(0deg) translateX(375px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(375px) rotate(-360deg);
+  }
+}
+.neptune_orbit {
+  height: 850px;
+  width: 850px;
+  
+}
+
+    
+    
+
+.neptune {
+  height: 38px;
+  width: 38px;
+  background: linear-gradient(#212354, #3ee4e8, #3e66f9, #6081ff, #89f3ff);
+  border-radius: 50%;
+  position: absolute;
+  top: 48%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  animation: orbit8 17s linear infinite;
+  
+}
+@keyframes orbit8 {
+  from {
+    transform: rotate(0deg) translateX(421px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(421px) rotate(-360deg);
+  }
+  
+}
+.mercury.paused,
+.venus.paused,
+.earth.paused,
+.moon.paused,
+.mars.paused,
+.jupiter.paused,
+.saturn.paused,
+.uranus.paused,
+.neptune.paused {
+   
+    animation-play-state: paused;
+
+    
+}
+.mercury_orbit.paused,
+.venus_orbit.paused,
+.earth_orbit.paused,
+.mars_orbit.paused,
+.jupiter_orbit.paused,
+.saturn_orbit.paused,
+.uranus_orbit.paused,
+.neptune_orbit.paused
+ {
+    height: 0px;
+    width: 0px;
+    
+}
+
+.neptune:hover{
+    height: 45px;
+    width: 45px;
+}
+
+.neptune::before {
+    content: "Travel Neptune";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0; /* Initially hide the tooltip */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Show the tooltip on mouseover */
+  .neptune:hover::before {
+    opacity: 1;
+  }
+
+  .mars:hover{
+      height: 30px;
+      width: 30px;
+  }
+  .mars::before {
+    content: "Travel Mars";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0; /* Initially hide the tooltip */
+    transition: opacity 0.3s ease-in-out;
+}
+  
+/* Show the tooltip on mouseover */
+.mars:hover::before {
+    opacity: 1;
+}
+.uranus:hover{
+    height: 47px;
+    width: 47px;
+}
+  .uranus::before {
+    content: "Travel Uranus";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0; /* Initially hide the tooltip */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Show the tooltip on mouseover */
+  .uranus:hover::before {
+    opacity: 1;
+  }
+
+  
+  .saturn:hover{
+    height: 50px;
+    width: 50px;
+}
+
+
+  .saturn::before {
+    content: "Travel Saturn";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0; /* Initially hide the tooltip */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Show the tooltip on mouseover */
+  .saturn:hover::before {
+    opacity: 1;
+  }
+
+  .jupiter:hover{
+    height: 55px;
+    width: 55px;
+}
+
+
+  .jupiter::before {
+    content: "Travel Jupiter";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0; /* Initially hide the tooltip */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Show the tooltip on mouseover */
+  .jupiter:hover::before {
+    opacity: 1;
+  }
+
+  .moon:hover{
+    height: 17px;
+    width: 17px;
+}
+
+
+  .moon::before {
+    content: "Travel Moon";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0; /* Initially hide the tooltip */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Show the tooltip on mouseover */
+  .moon:hover::before {
+    opacity: 1;
+  }
+
+  .venus:hover{
+    height: 36px;
+    width: 36px;
+}
+
+
+  .venus::before {
+    content: "Travel Venus";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0; /* Initially hide the tooltip */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Show the tooltip on mouseover */
+  .venus:hover::before {
+    opacity: 1;
+  }
+
+  .mercury:hover{
+    height: 27px;
+    width: 27px;
+}
+
+
+  .mercury::before {
+    content: "Travel Uranus";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0; /* Initially hide the tooltip */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Show the tooltip on mouseover */
+  .mercury:hover::before {
+    opacity: 1;
+  }
+

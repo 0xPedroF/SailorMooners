@@ -1,3 +1,4 @@
+define (function(){
 var canvas = document.getElementById('canvas');
 var flr = Math.floor;
 
@@ -120,3 +121,4 @@ draw();
 window.onresize = function() {
     var { halfw, halfh } = initializeCanvasSize();
 };
+});
