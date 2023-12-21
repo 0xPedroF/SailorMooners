@@ -32,6 +32,7 @@
   height: 200%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  font-family: "Lucida Console", monospace;
 }
 
 .flip-card-front {

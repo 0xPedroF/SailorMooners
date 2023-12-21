@@ -12,23 +12,24 @@ define(function () {
         <div class="flip-card-inner">
           <div class="flip-card-front">
           <h1>${internals.data.planet.name}</h1>
-          <p class="text">Type: ${internals.data.planet.type}</p>
-          <p class="text">Gravity: ${internals.data.planet.gravity}</p>
-          <p class="text">Average surface temperature: ${internals.data.planet.temperature}</p>
-          <p class="text">Diameter: ${internals.data.planet.Diameter}</p>
-          <p class="text">Satellites: ${internals.data.planet.satellites} Names: ${internals.data.planet.satellites[0]}, ${internals.data.planet.satellites[1]}</p>
-          <p class="text">Distance to the Sun: ${internals.data.planet.sunDistance}</p>
-          <p class="text">Light travel time: ${internals.data.planet.oneWayLightToTheSun}</p>
+          <p class="text"><Strong>Type: </Strong>${internals.data.planet.type}</p>
+          <p class="text"><Strong>Gravity</Strong>: ${internals.data.planet.gravity}</p>
+          <p class="text"><Strong>Average surface temperature: </Strong>${internals.data.planet.temperature}</p>
+          <p class="text"><Strong>Diameter: </Strong>${internals.data.planet.Diameter}</p>
+          <p class="text"><Strong>Satellites: </Strong>${internals.data.planet.satellites}</p>
+          <p class="text"><Strong>Distance to the Sun: </Strong>${internals.data.planet.sunDistance}</p>
+          <p class="text"><Strong>Light travel time: </Strong>${internals.data.planet.oneWayLightToTheSun}</p>
+
           </div>
           <div class="flip-card-back">
             <h1>${internals.data.sailors.scoutName}</h1> 
-            <p class="text">Name: ${internals.data.sailors.englishName}/${internals.data.sailors.japaneseName}</p>
-            <p class="text">Description : ${internals.data.sailors.description}</p>
-            <p class="text">Birthday : ${internals.data.sailors.birthday}</p>
-            <p class="text">Transformation phrase : ${internals.data.sailors.transformation_phrase}</p>
-            <p class="text">Powers : ${internals.data.sailors.powers}</p>
-            <p class="text">Likes : ${internals.data.sailors.likes}</p>
-            <p class="text">Dislikes : ${internals.data.sailors.dislikes}</p>
+            <p class="text"><Strong>Name: </Strong>${internals.data.sailors.englishName}/${internals.data.sailors.japaneseName}</p>
+            <p class="text"><Strong>Description : </Strong>${internals.data.sailors.description}</p>
+            <p class="text"><Strong>Birthday : </Strong>${internals.data.sailors.birthday}</p>
+            <p class="text"><Strong>Transformation phrase : </Strong>${internals.data.sailors.transformation_phrase}</p>
+            <p class="text"><Strong>Powers : </Strong>${internals.data.sailors.powers}</p>
+            <p class="text"><Strong>Likes : </Strong>${internals.data.sailors.likes}</p>
+            <p class="text"><Strong>Dislikes : </Strong>${internals.data.sailors.dislikes}</p>
           </div>
         </div>
       </div>`;

@@ -130,7 +130,7 @@ define(function() {
             Diameter: "4.879 km",
             sunDistance: "57.910.000 km",
             oneWayLightToTheSun: "3,38 min",
-            satellites: { number: 0, names: [] },
+            satellites: "None",
             temperature: "167°C",
             gravity: "3.7 m/s²",
             div: '<div class="mercury1"></div>'
@@ -146,7 +146,7 @@ define(function() {
             Diameter: "12.104 km",
             sunDistance: "108.200.000 km",
             oneWayLightToTheSun: "5.97 min",
-            satellites: { number: 0, names: [] },
+            satellites: "None",
             temperature: "461°C",
             gravity: "8.87 m/s²",
             div: '<div class="venus1"></div>'
@@ -162,13 +162,12 @@ define(function() {
             Diameter: "6.779 km",
             sunDistance: "227.940.000 km",
             oneWayLightToTheSun: "11,88 min",
-            satellites: { number: 2, names: ["Fobos", "Deimos"] },
+            satellites: "Fobos, Deimos",
             temperature: "-63°C",
             gravity: "3.721 m/s²",
             div: '<div class="mars1"></div>'
         },
         {
-            
             name: "Earth",
             type: "Terrestrial",
             orbitalPeriod: { days: "365,26 days", years: "1 year" },
@@ -177,7 +176,7 @@ define(function() {
             radius: "6.371 km",
             Diameter: "12.742 km",
             sunDistance: "149.600.000 km",
-            satellites: { number: 1, names: ["Moon"] },
+            satellites: "Moon",
             temperature: "15°C",
             oneWayLightToTheSun: "8,36 min",
             gravity: "9.807 m/s²"
@@ -193,7 +192,7 @@ define(function() {
             Diameter: "139.820 km",
             sunDistance: "778.500.000 km",
             oneWayLightToTheSun: "41,21 min",
-            satellites: { number: 79, names: ["Io", "Europa", "Ganímedes", "Calisto"] },
+            satellites: "Io, Europa, Ganímedes, Calisto",
             temperature: "-108°C",
             gravity: "24.79 m/s²",
             div: '<div class="jupiter1"></div>'
@@ -209,20 +208,7 @@ define(function() {
             Diameter: "116.464 km",
             sunDistance: "1.429.400.000 km",
             oneWayLightToTheSun: "82.02 min",
-            satellites: {
-                number: 82,
-                names: [
-                    "Mimas",
-                    "Encélado",
-                    "Tétis",
-                    "Dione",
-                    "Reia",
-                    "Titã",
-                    "Hiperião",
-                    "Jápeto",
-                    "Febe",
-                ],
-            },
+            satellites: "Mimas, Encélado, Tétis, Dione, Reia, Titã, Hiperião, Jápeto, Febe",
             temperature: "-139°C",
             gravity: "10.44 m/s²",
             div: '<div class="saturn1"></div>'
@@ -238,18 +224,7 @@ define(function() {
             Diameter: "49.244 km",
             sunDistance: "4.504.300.000 km",
             oneWayLightToTheSun: "248.79 min",
-            satellites: {
-                number: 14,
-                names: [
-                    "Náiade",
-                    "Talassa",
-                    "Despina",
-                    "Galateia",
-                    "Larissa",
-                    "Hipocampo",
-                    "Proteu",
-                ],
-            },
+            satellites:"Náiade, Talassa, Despina, Galateia, Larissa, Hipocampo, Proteu",
             temperature: "-218°C",
             gravity: "11.15 m/s²",
             div: '<div class="neptune1"></div>'
@@ -265,10 +240,7 @@ define(function() {
             Diameter: "50.724 km",
             sunDistance: "2.870.000.000 km",
             oneWayLightToTheSun: "163.72 min",
-            satellites: {
-                number: 27,
-                names: ["Miranda", "Ariel", "Umbriel", "Titânia", "Oberon"],
-            },
+            satellites: "Miranda, Ariel, Umbriel, Titânia, Oberon",
             temperature: "-200°C",
             gravity: "8.87 m/s²",
             div: '<div class="uranus1"></div>'
@@ -283,7 +255,7 @@ define(function() {
             Diameter: "3 474 km",
             sunDistance: "149.600.000 km",
             oneWayLightToTheSun: "8,36 min",
-            satellites: { number: 0, names: [] },
+            satellites: "None",
             temperature: "-38°C",
             gravity: "1.62 m/s²",
             div: '<div class="planet"><div class="moon1"></div></div>'
