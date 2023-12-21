@@ -22,13 +22,13 @@ define(function () {
           </div>
           <div class="flip-card-back">
             <h1>${internals.data.sailors.scoutName}</h1> 
-            <p>Name: ${internals.data.sailors.englishName}/${internals.data.sailors.japaneseName}</p>
-            <p>Description : ${internals.data.sailors.description}</p>
-            <p>Birthday : ${internals.data.sailors.birthday}</p>
-            <p>Transformation phrase : ${internals.data.sailors.transformation_phrase}</p>
-            <p>Powers : ${internals.data.sailors.powers}</p>
-            <p>Likes : ${internals.data.sailors.likes}</p>
-            <p>Dislikes : ${internals.data.sailors.dislikes}</p>
+            <p class="text">Name: ${internals.data.sailors.englishName}/${internals.data.sailors.japaneseName}</p>
+            <p class="text">Description : ${internals.data.sailors.description}</p>
+            <p class="text">Birthday : ${internals.data.sailors.birthday}</p>
+            <p class="text">Transformation phrase : ${internals.data.sailors.transformation_phrase}</p>
+            <p class="text">Powers : ${internals.data.sailors.powers}</p>
+            <p class="text">Likes : ${internals.data.sailors.likes}</p>
+            <p class="text">Dislikes : ${internals.data.sailors.dislikes}</p>
           </div>
         </div>
       </div>`;
@@ -46,7 +46,7 @@ define(function () {
     }
 
     internals.createSailor = function () {
-        const sailor = `<div class="sailor"><img id="sailor" src="img/sailor.png"></div>`
+        const sailor = `<img id="sailor" src="img/sailor.png">`
         return sailor;
     }
 
