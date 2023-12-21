@@ -10,7 +10,7 @@ define(function () {
     internals.createButton = function () {
         return (
 
-            '<button class="stop-button">STOP PLANETS ROTATION</button>' +
+            '<div class="stop-button-div"><button class="stop-button">STOP PLANETS ROTATION</button>' +
             '</div>')
     }
     internals.createSolarSystem = function () {

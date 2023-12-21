@@ -224,7 +224,35 @@ body {
 
 #backToMenu:hover {
   background-color: #00035c;
-  /* Green */
+  color: white;
+}
+
+.stop-button{
+  display: flex;
+  border-radius: 20px;
+  justify-content: center;
+  margin-top: 50px;
+  background-color: rgb(6, 0, 185);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 999;
+  border-radius: 12px
+}
+
+.stop-button-div{
+  display: flex;
+  justify-content: space-between;
+}
+
+.stop-button:hover{
+  background-color: #00035c;
   color: white;
 }
 
@@ -255,6 +283,21 @@ body {
   background-size: 200% 100%;
 
 }
+
+.planet:hover,
+.moon1:hover,
+.mercury1:hover,
+.mars1:hover,
+.jupiter1:hover,
+.saturn1:hover,
+.neptune1:hover,
+.uranus1:hover,
+.venus1:hover,
+#sailor:hover{
+  animation-play-state: paused;
+
+}
+
 
 #app {
   position: center;
