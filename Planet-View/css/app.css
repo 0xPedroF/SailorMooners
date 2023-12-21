@@ -1,8 +1,9 @@
 .flip-card {
     background-color: transparent;
     width: 300px;
-    height: 300px;
+    height: 600px;
     perspective: 1000px;
+    overflow: auto;
 }
 
 .flip-card-inner {
@@ -32,11 +33,17 @@
 }
 
 .flip-card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #bbb;
     color: black;
 }
 
 .flip-card-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #2980b9;
     color: white;
     transform: rotateY(180deg);
@@ -77,29 +84,39 @@ body {
         orbit 8s ease-in-out infinite;
 }
 
+.text{
+    margin-bottom: 5px;
+    height: 60px;
+    border: 0px;
+}
+
 #mainDiv {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    border: solid red;
 }
 
 #backToMenu {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .sailor {
     display: flex;
     justify-content: center;
+    height: fit-content;
+    width: auto;
+
 }
 
 #sailor {
     display: flex;
     justify-self: center;
-    width: 40%;
+    width: 30%;
     height: auto;
+
+    animation: float 2s ease-in-out infinite;
 }
 
 .planet,
@@ -141,5 +158,11 @@ body {
     100% {
         left: -11em;
         z-index: 1;
+    }
+}
+
+@keyframes float {
+    50%{
+        transform: translateY(50px);
     }
 }

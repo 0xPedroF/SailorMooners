@@ -11,14 +11,14 @@ define(function () {
         const card = `<div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-          <p>Planet: ${internals.data.planet.name}</p>
-          <p>Type: ${internals.data.planet.type}</p>
-          <p>Gravity: ${internals.data.planet.gravity}</p>
-          <p>Average surface temperature: ${internals.data.planet.temperature}</p>
-          <p>Diameter: ${internals.data.planet.Diameter}</p>
-          <p>Satellites: ${internals.data.planet.satellites} Names: ${internals.data.planet.satellites[0]}, ${internals.data.planet.satellites[1]}</p>
-          <p>Distance to the Sun: ${internals.data.planet.sunDistance}</p>
-          <p>Light travel time: ${internals.data.planet.oneWayLightToTheSun}</p>
+          <h1>${internals.data.planet.name}</h1>
+          <p class="text">Type: ${internals.data.planet.type}</p>
+          <p class="text">Gravity: ${internals.data.planet.gravity}</p>
+          <p class="text">Average surface temperature: ${internals.data.planet.temperature}</p>
+          <p class="text">Diameter: ${internals.data.planet.Diameter}</p>
+          <p class="text">Satellites: ${internals.data.planet.satellites} Names: ${internals.data.planet.satellites[0]}, ${internals.data.planet.satellites[1]}</p>
+          <p class="text">Distance to the Sun: ${internals.data.planet.sunDistance}</p>
+          <p class="text">Light travel time: ${internals.data.planet.oneWayLightToTheSun}</p>
           </div>
           <div class="flip-card-back">
             <h1>${internals.data.sailors.scoutName}</h1> 
@@ -40,28 +40,28 @@ define(function () {
         return backToMenu;
     };
 
-    internals.createPlanetDiv = function() {
+    internals.createPlanetDiv = function () {
         const planetDiv = `<div class="planet"><div class="moon"></div></div>`
         return planetDiv
     }
 
-    internals.createSailor = function() {
+    internals.createSailor = function () {
         const sailor = `<div class="sailor"><img id="sailor" src="img/sailor.png"></div>`
         return sailor;
     }
 
-    internals.createMainDiv = function() {
+    internals.createMainDiv = function () {
         const card = internals.createCard();
         const planetDiv = internals.createPlanetDiv();
         const sailor = internals.createSailor();
-          
+
 
         const mainDiv = `<div id="mainDiv">${planetDiv}${sailor}${card}</div>`
         return mainDiv;
     }
 
-    internals.renderMainDiv = function() {
-        if(internals.elements.mainDiv) {
+    internals.renderMainDiv = function () {
+        if (internals.elements.mainDiv) {
             return;
         }
 
@@ -71,8 +71,8 @@ define(function () {
         console.log("Main div Rendered");
     }
 
-    internals.renderButton = function() {
-        if(internals.elements.button) {
+    internals.renderButton = function () {
+        if (internals.elements.button) {
             return;
         }
 
