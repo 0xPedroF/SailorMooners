@@ -39,21 +39,52 @@ define(function () {
         );
 
     };
-    
+
+    internals.createOrbits = function () {
+        return (
+
+            '<div class="mercury1_orbit">' +
+
+            '<div class="venus1_orbit">' +
+
+            '<div class="earth1_orbit">' +
+
+            '<div class="mars1_orbit">' +
+
+            '<div class="jupiter1_orbit">' +
+
+            '<div class="saturn1_orbit">' +
+
+
+            '<div class="uranus1_orbit">' +
+
+            '<div class="neptune1_orbit">'
+
+
+        );
+    }
+    internals.renderOrbits = function () {
+        if (internals.elements.orbits) {
+            internals.elements.orbits.empty();
+        }
+        internals.elements.orbits = $(internals.createOrbits());
+        internals.elements.app.append(internals.elements.orbits);
+    }
+
     internals.renderSolarSystem = function () {
-        
+
         if (internals.elements.solarSystem) {
             internals.elements.solarSystem.empty();
         }
 
-
+        
         internals.elements.solarSystem = $(internals.createSolarSystem());
         //internals.elements.solarSystem.click(internals.handlers['neptune']('neptune'))
 
         internals.elements.solarSystem.click(function (event) {
-           
+
             const classToHandler = {
-                
+
 
                 'mercury': () => internals.handlers['mercury']('sailors/mercury'),
                 'venus': () => internals.handlers['venus']('sailors/venus'),
@@ -63,8 +94,8 @@ define(function () {
                 'saturn_ring': () => internals.handlers['saturn']('sailors/saturn'),
                 'uranus': () => internals.handlers['uranus']('sailors/uranus'),
                 'neptune': () => internals.handlers['neptune']('sailors/neptune'),
-                
-            
+
+
             };
 
             const clickedClass = Array.from(event.target.classList).find(className => classToHandler.hasOwnProperty(className));
@@ -75,39 +106,40 @@ define(function () {
             } else {
                 console.log('Class not mapped:', event.target.classList);
                 // Handle the case where the class is not mapped
-                
+
             }
         });
         internals.elements.app.append(internals.elements.solarSystem);
 
-        
+
 
     };
 
     internals.renderButton = function () {
-        
+
         internals.elements.button = $(internals.createButton())
         internals.elements.button.click(internals.handlers['stop-button']);
-       
-       
+
+
         internals.elements.app.append(internals.elements.button);
-        
+
     };
- 
+
 
     externals.bind = function (event, handler) {
-        
+
         internals.handlers[event] = handler;
-        
+
     };
 
     externals.render = function () {
-       
-            internals.elements.app = $('#app');
-            internals.renderButton();
-            internals.renderSolarSystem();
-            
-            
+
+        internals.elements.app = $('#app');
+        internals.renderButton();
+        internals.renderSolarSystem();
+        internals.renderOrbits();
+
+
     };
     return externals;
 });

@@ -51,7 +51,7 @@
 }
 
 body {
-  background: url(/webapp-sailormoon-solarsystem/img/starsBackground.png) center no-repeat;
+  background: url(/img/starsBackground.png) center no-repeat;
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -63,7 +63,7 @@ body {
   justify-content: center;
   width: 20em;
   height: 20em;
-  background-image: url(/webapp-sailormoon-solarsystem/img/earthSurface.jpeg);
+  background-image: url(/img/earthSurface.jpeg);
   background-size: cover;
   box-shadow: inset -2em -2em 2em black, -0.5em -0.5em 1em rgb(133, 255, 178);
   position: relative;
@@ -75,7 +75,7 @@ body {
   justify-content: center;
   width: 20em;
   height: 20em;
-  background-image: url(/webapp-sailormoon-solarsystem/img/mercuryBackground.jpeg);
+  background-image: url(/img/mercuryBackground.jpeg);
   background-size: cover;
   box-shadow: inset -2em -2em 2em black, -0.5em -0.5em 1em rgb(255, 255, 255);
   position: relative;
@@ -83,11 +83,12 @@ body {
   border-radius: 50%;
   background-repeat: repeat;
   background-size: 200% 100%;
+  
 
 }
 
 .moon1 {
-  background-image: url(/webapp-sailormoon-solarsystem/img/moonSurface.jpeg);
+  background-image: url(/img/moonSurface.jpeg);
   width: 6em;
   height: 6em;
   background-size: cover;
@@ -106,7 +107,7 @@ body {
   justify-content: center;
   width: 20em;
   height: 20em;
-  background-image: url(/webapp-sailormoon-solarsystem/img/venusBackground.jpeg);
+  background-image: url(/img/venusBackground.jpeg);
   background-size: cover;
   box-shadow: inset -2em -2em 2em black, -0.5em -0.5em 1em rgb(255, 255, 255);
   position: relative;
@@ -122,7 +123,7 @@ body {
   justify-content: center;
   width: 20em;
   height: 20em;
-  background-image: url(/webapp-sailormoon-solarsystem/img/marsBackground.jpg);
+  background-image: url(/img/marsBackground.jpg);
   background-size: cover;
   box-shadow: inset -2em -2em 2em black, -0.5em -0.5em 1em rgb(255, 255, 255);
   position: relative;
@@ -137,7 +138,7 @@ body {
   justify-content: center;
   width: 20em;
   height: 20em;
-  background-image: url(/webapp-sailormoon-solarsystem/img/jupiterBackground.jpeg);
+  background-image: url(/img/jupiterBackground.jpeg);
   background-size: cover;
   box-shadow: inset -2em -2em 2em black, -0.5em -0.5em 1em rgb(255, 255, 255);
   position: relative;
@@ -152,7 +153,7 @@ body {
   justify-content: center;
   width: 20em;
   height: 20em;
-  background-image: url(/webapp-sailormoon-solarsystem/img/saturnBackground.jpeg);
+  background-image: url(/img/saturnBackground.jpeg);
   background-size: cover;
   box-shadow: inset -2em -2em 2em black, -0.5em -0.5em 1em rgb(255, 255, 255);
   position: relative;
@@ -167,7 +168,7 @@ body {
   justify-content: center;
   width: 20em;
   height: 20em;
-  background-image: url(/webapp-sailormoon-solarsystem/img/uranusBackground.jpeg);
+  background-image: url(/img/uranusBackground.jpeg);
   background-size: cover;
   box-shadow: inset -2em -2em 2em black, -0.5em -0.5em 1em rgb(255, 255, 255);
   position: relative;
@@ -182,7 +183,7 @@ body {
   justify-content: center;
   width: 20em;
   height: 20em;
-  background-image: url(/webapp-sailormoon-solarsystem/img/neptuneBackground.jpeg);
+  background-image: url(/img/neptuneBackground.jpeg);
   background-size: cover;
   box-shadow: inset -2em -2em 2em black, -0.5em -0.5em 1em rgb(255, 255, 255);
   position: relative;
@@ -201,6 +202,7 @@ body {
 #mainDiv {
   display: flex;
   justify-content: space-between;
+  margin-top: 150px;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -372,6 +374,11 @@ body {
     width: 150px;
     height: 150px;
 }
+.mercury1_orbit{
+  width: 150px;
+  height: 150px;
+}
+
 .mercury{
     width: 20px;
     height: 20px;
@@ -406,11 +413,32 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: transparent;
-  
-  
+  background: transparent; 
 }
+.mercury1_orbit,
+.venus1_orbit,
+.earth1_orbit,
+.mars1_orbit,
+.jupiter1_orbit,
+.saturn1_orbit,
+.uranus1_orbit,
+.neptune1_orbit {
+  border: 1px dotted #dd9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: transparent; 
+  z-index: -1;
+  opacity: 0;
+}
+
 .venus_orbit {
+  height: 210px;
+  width: 210px;
+}
+.venus1_orbit {
   height: 210px;
   width: 210px;
 }
@@ -437,10 +465,14 @@ body {
   height: 300px;
   width: 300px;
 }
+.earth1_orbit {
+  height: 300px;
+  width: 300px;
+}
 .earth {
   height: 34px;
   width: 34px;
-  background-image: url("/webapp-sailormoon-solarsystem/images/earth.png");
+  background-image: url("/images/earth.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -494,6 +526,10 @@ body {
   height: 400px;
   width: 400px;
 }
+.mars1_orbit {
+  height: 400px;
+  width: 400px;
+}
 .mars {
   height: 23px;
   width: 23px;
@@ -521,6 +557,10 @@ body {
   }
 }
 .jupiter_orbit {
+  height: 500px;
+  width: 500px;
+}
+.jupiter1_orbit {
   height: 500px;
   width: 500px;
 }
@@ -552,6 +592,10 @@ body {
   }
 }
 .saturn_orbit {
+  height: 630px;
+  width: 630px;
+}
+.saturn1_orbit {
   height: 630px;
   width: 630px;
 }
@@ -589,7 +633,11 @@ body {
   width: 750px;
   
 }
-
+.uranus1_orbit {
+  height: 750px;
+  width: 750px;
+  
+}
 .uranus {
   height: 40px;
   width: 40px;
@@ -614,9 +662,11 @@ body {
   width: 850px;
   
 }
-
-    
-    
+.neptune1_orbit {
+  height: 850px;
+  width: 850px;
+  
+}
 
 .neptune {
   height: 38px;
@@ -639,20 +689,9 @@ body {
   }
   
 }
-.mercury.paused,
-.venus.paused,
-.earth.paused,
-.moon.paused,
-.mars.paused,
-.jupiter.paused,
-.saturn.paused,
-.uranus.paused,
-.neptune.paused {
-   
-    animation-play-state: paused;
 
-    
-}
+
+
 .mercury_orbit.paused,
 .venus_orbit.paused,
 .earth_orbit.paused,
@@ -662,11 +701,24 @@ body {
 .uranus_orbit.paused,
 .neptune_orbit.paused
  {
+
     height: 0px;
     width: 0px;
     
 }
-
+.mercury.paused,
+.venus.paused,
+.earth.paused,
+.moon.paused,
+.mars.paused,
+.jupiter.paused,
+.saturn.paused,
+.uranus.paused,
+.neptune.paused {
+  
+    animation-play-state: paused;
+   
+}
 .neptune:hover{
     height: 45px;
     width: 45px;

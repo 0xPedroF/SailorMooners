@@ -78,7 +78,7 @@ define(function () {
         $("#app").empty();
 
         controller.start(); if (window.location.hash === "#" + internals.defaultRoute) {
-            const tryToPlay = setInterval(() => {
+          const tryToPlay = setInterval(() => {
                 audio.play()
                     .then(() => {
                         clearInterval(tryToPlay);
@@ -86,7 +86,7 @@ define(function () {
                     .catch(error => {
                         console.info('User has not interacted with document yet.');
                     });
-            }, 1000);
+            }, 1000); 
         } else {
           audio.pause();
           audio.currentTime = 0;
